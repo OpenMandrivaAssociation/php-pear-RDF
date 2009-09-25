@@ -13,6 +13,7 @@ Source0:	http://download.pear.php.net/package/%{_pearname}-%{version}%{pre}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
+BuildRequires:  php-pear
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -43,8 +44,8 @@ rm -rf %{buildroot}
 %files
 %defattr(-,root,root)
 %doc %{_pearname}-%{version}%{pre}/docs/*
-%{_datadir}/pear/RDF.php
-%{_datadir}/pear/RDF
-%{_datadir}/pear/data/RDF
+%{_datadir}/pear/%{_class}.php
+%{_datadir}/pear/%{_class}
+%{_datadir}/pear/data/%{_class}
 %{_datadir}/pear/packages/%{_pearname}.xml
 

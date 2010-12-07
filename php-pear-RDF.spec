@@ -4,7 +4,7 @@
 
 Name:		php-pear-%{upstream_name}
 Version:	0.1.0
-Release:	%mkrel 0.%{pre}.1
+Release:	%mkrel 0.%{pre}.2
 Summary:	Port of the core RAP API
 License:	PHP License
 Group:		Development/PHP

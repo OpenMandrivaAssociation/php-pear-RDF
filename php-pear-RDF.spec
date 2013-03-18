@@ -3,13 +3,13 @@
 %define		pre         alpha1
 
 Name:		php-pear-%{upstream_name}
-Version:	0.1.0
-Release:	0.%{pre}.5
+Version:	0.2.0
+Release:	1
 Summary:	Port of the core RAP API
 License:	PHP License
 Group:		Development/PHP
 URL:		http://pear.php.net/package/RDF
-Source0:	http://download.pear.php.net/package/%{upstream_name}-%{version}%{pre}.tgz
+Source0:	http://download.pear.php.net/package/RDF-%{version}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
 Requires:	php-pear
@@ -78,3 +78,4 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 * Thu Sep 24 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.1.0-0.alpha1.1mdv2010.0
 - first mdv release
+

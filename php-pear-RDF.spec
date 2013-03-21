@@ -1,6 +1,5 @@
 %define		_class		RDF
 %define		upstream_name	%{_class}
-%define		pre         alpha1
 
 Name:		php-pear-%{upstream_name}
 Version:	0.2.0
@@ -22,11 +21,11 @@ http://www.wiwiss.fu-berlin.de/suhl/bizer/rdfapi/.
 
 %prep
 %setup -q -c
-mv package.xml %{upstream_name}-%{version}%{pre}/%{upstream_name}.xml
+mv package.xml %{upstream_name}-%{version}/%{upstream_name}.xml
 
 %install
 
-cd %{upstream_name}-%{version}%{pre}
+cd %{upstream_name}-%{version}
 pear install --nodeps --packagingroot %{buildroot} %{upstream_name}.xml
 rm -rf %{buildroot}%{_datadir}/pear/.??*
 
@@ -41,8 +40,7 @@ install -m 644 %{upstream_name}.xml %{buildroot}%{_datadir}/pear/packages
 
 
 %files
-%defattr(-,root,root)
-%doc %{upstream_name}-%{version}%{pre}/docs/*
+%doc %{upstream_name}-%{version}/docs/*
 %{_datadir}/pear/%{_class}.php
 %{_datadir}/pear/%{_class}
 %{_datadir}/pear/data/%{_class}

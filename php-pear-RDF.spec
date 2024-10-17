@@ -7,7 +7,7 @@ Release:	2
 Summary:	Port of the core RAP API
 License:	PHP License
 Group:		Development/PHP
-URL:		http://pear.php.net/package/RDF
+URL:		https://pear.php.net/package/RDF
 Source0:	http://download.pear.php.net/package/RDF-%{version}.tgz
 Requires(post): php-pear
 Requires(preun): php-pear
